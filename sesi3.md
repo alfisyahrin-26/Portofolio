@@ -247,25 +247,58 @@ Pada sesi ketiga ini, kita berfokus untuk menyempurnakan struktur navigasi serta
 
 ## 25. Integrasi 100% Foto Scan Asli Seluruh 6 Sertifikat (GSI & ELC)
 *   **Penggantian Mockup Vektor dengan Dokumen Asli:**
-    *   Dua sertifikat terakhir yang sebelumnya menggunakan ilustrasi kertas mockup vektor resmi digantikan dengan foto hasil scan fisik otentik:
-        1.  `gsi.png` ditautkan ke sertifikat `gsi-matematika-2023` (**Piagam Penghargaan Peraih Medali Emas Tingkat Nasional - Olimpiade Sains Siswa Nasional 2023** mata pelajaran Matematika oleh Garuda Sains Indonesia, diselenggarakan 10-12 September 2023).
-        2.  `elc.png` ditautkan ke sertifikat `elc-english-2023` (**Certificate of Completion - English for Teens Module 1** dengan predikat *Outstanding Performance* di Eka Learning Center Lhokseumawe, diselenggarakan 9 Januari - 16 Agustus 2023).
-    *   Kini seluruh 6 kartu sertifikat dan pop-up modal pratinjau menampilkan 100% foto dokumen fisik asli beresolusi tinggi.
+    *   Dua sertifikat terakhir yang sebelumnya menggunakan ilustrasi mockup kertas vektor resmi (*Piagam Delegasi PORSENI* dan *Sertifikat Sabuk Hitam Kukkiwon*) kini digantikan sepenuhnya dengan foto hasil scan CamScanner fisik otentik yang dikirimkan oleh pengguna:
+        1.  **Garuda Sains Indonesia (gsi.png):**
+            *   *File Aset:* [gsi.png](file:///d:/Portofolio/src/assets/sertifikat/gsi.png)
+            *   *ID:* `gsi-matematika-2023`
+            *   *Judul:* Piagam Penghargaan Peraih Medali Emas Matematika - OSSN 2023
+            *   *Penerima:* MUHAMMAD ALFISYAHRIN MUZHAFFAR (SMA Sukma Bangsa Lhokseumawe)
+            *   *Prestasi:* Peraih Medali Emas Tingkat Nasional (Mata Pelajaran: Matematika)
+            *   *Ajang:* Olimpiade Sains Siswa Nasional 2023 (Tingkat SMA/SMK/MA Sederajat)
+            *   *Tanggal:* 10 - 12 September 2023
+            *   *Nomor Registrasi:* `375244/GSIGANTARI/OSTN/IX/2023` (SK Kemenkumham: NO AHU-005823.AH.01.30. Tahun 2021)
+            *   *Penerbit:* Garuda Sains Indonesia (Direktur: Nadya Arwinda, S.Pd)
+        2.  **Eka Learning Center (elc.png):**
+            *   *File Aset:* [elc.png](file:///d:/Portofolio/src/assets/sertifikat/elc.png)
+            *   *ID:* `elc-english-2023`
+            *   *Judul:* Certificate of Completion - English for Teens Module 1
+            *   *Penerima:* MUHAMMAD ALFISYAHRIN MUZHAFAR
+            *   *Kualifikasi:* Completed ENGLISH FOR TEENS module 1 with outstanding performance
+            *   *Periode:* 9 Januari - 16 Agustus 2023
+            *   *Nomor Registrasi:* `004/ELC/TEENS/VIII/2023`
+            *   *Penerbit:* Eka Learning Center (ELC) Lhokseumawe (Facilitator: Sarah Nadia, S.Pd & Directress: Ainol Mardhiah, MA. TESOL)
+    *   **Pembaruan Kode:**
+        *   Di [App.jsx](file:///d:/Portofolio/src/App.jsx), mengimpor `gsiImage` dan `elcImage` lalu mendaftarkannya ke dalam `certImageMap`.
+        *   Di [i18n.js](file:///d:/Portofolio/src/i18n.js), memperbarui data sertifikat untuk kamus bahasa Inggris (`EN`) dan bahasa Indonesia (`ID`).
+    *   **Hasil:** Seluruh 6 kartu sertifikat dan pop-up modal pratinjau portofolio kini 100% menggunakan foto scan dokumen fisik nyata beresolusi tinggi (*Piala Pangdam IM, Kejurkot Lhokseumawe, PTC, POMDA Aceh, GSI Medali Emas Matematika, dan ELC English for Teens*).
 
 ## 26. Penghapusan Badge Nomor Kurung Siku pada Judul Besar Section
-*   **Pembersihan Elemen Nomor di Samping Judul Utama:**
-    *   Menghapus badge angka kurung siku berwarna hijau lime (`[05]`, `[06]`, `[22]`) yang sebelumnya menempel di samping judul-judul section besar:
-        *   Menghapus `[05]` di samping judul **ACHIEVEMENTS** pada tab *Achievements*.
-        *   Menghapus `[06]` di samping judul **PROFESSIONAL VALIDATION.** pada tab *Certificates*.
-        *   Menghapus `[22]` di samping judul **SELECTED WORK** pada tab *Work*.
-    *   Tampilan judul-judul besar kini terlihat lebih bersih, rapi, minimalis, dan elegan tanpa angka yang mengganggu visual tipografi utama.
+*   **Permintaan Pengguna:**
+    *   Menghapus setiap nomor berformat kurung siku berwarna hijau lime (`[05]`, `[06]`, `[22]`) yang berada di samping judul-judul section besar.
+*   **Implementasi Pembersihan:**
+    *   **Tab Achievements:** Menghapus elemen `<motion.span className="achievements-number">` (`[05]`) di samping judul **ACHIEVEMENTS** pada [App.jsx](file:///d:/Portofolio/src/App.jsx).
+    *   **Tab Certificates:** Menghapus elemen `<motion.span className="certificates-count">` (`[06]`) di samping judul **PROFESSIONAL VALIDATION.** pada [App.jsx](file:///d:/Portofolio/src/App.jsx).
+    *   **Tab Work:** Menghapus elemen `<motion.span className="selected-work-number">` (`[22]`) di samping judul **SELECTED WORK** pada [App.jsx](file:///d:/Portofolio/src/App.jsx).
+    *   **Pembersihan Kamus i18n:** Menghapus kunci properti `number: "[05]"`, `count: "[06]"`, dan `headerNumber: "[22]"` dari [i18n.js](file:///d:/Portofolio/src/i18n.js) untuk bahasa Inggris dan bahasa Indonesia.
+*   **Hasil Tampilan:** Tipografi judul-judul besar kini terlihat bersih, elegan, dan proporsional tanpa gangguan visual badge angka.
+*   **Verifikasi Build:** Perintah `npm run build` dijalankan dan lulus 100% tanpa kesalahan sintaksis maupun runtime.
 
-## 27. Sinkronisasi & Push ke Repository GitHub
-*   **Inisialisasi Git & Konfigurasi Remote:**
-    *   Menginisialisasi Git repository lokal dengan branch utama `main`.
-    *   Menghubungkan remote origin ke repository GitHub resmi: `https://github.com/alfisyahrin-26/Portofolio.git`.
-    *   Memperbarui `.gitignore` agar file konfigurasi lingkungan rahasia (`.env`, `.env.*`) tetap aman dan tidak terunggah ke publik.
-*   **Dokumentasi README.md Profesional:**
-    *   Membuat berkas `README.md` komprehensif yang memuat ringkasan fitur, teknologi unggulan (React 19, Vite, Framer Motion, GSAP, Tailwind/CSS), struktur folder proyek, kredensial penghargaan, dan panduan instalasi/build.
-*   **Push ke GitHub Berhasil:**
-    *   Semua 48 file sumber kode, aset foto dokumen sertifikat asli, komponen interaktif, dan dokumentasi berhasil di-commit dan di-push ke branch `main`.
+## 27. Sinkronisasi & Push Penuh ke Repository GitHub
+*   **Inisialisasi Git Lokal:**
+    *   Menginisialisasi Git repository lokal di direktori `D:\Portofolio` dengan branch utama `main`.
+    *   Menambahkan remote repository GitHub resmi: `https://github.com/alfisyahrin-26/Portofolio.git`.
+*   **Keamanan & Proteksi Lingkungan (.gitignore):**
+    *   Memperbarui berkas [.gitignore](file:///d:/Portofolio/.gitignore) untuk memastikan file sensitif/lokal seperti `.env` dan `.env.*` diabaikan dan tidak terunggah ke repositori publik.
+*   **Dokumentasi README.md Komprehensif:**
+    *   Membuat berkas [README.md](file:///d:/Portofolio/README.md) profesional berbahasa Inggris yang merangkum:
+        *   Sorotan fitur unggulan (SPA murni, visual Navy Blue `#090D45` & Lime Green `#D1FF00`, interaksi fisik kursor & ID Card `DecayCard`, sistem bilingual i18n).
+        *   Daftar 6 dokumen sertifikasi resmi.
+        *   Tabel stack teknologi (React 19, Vite, Framer Motion, GSAP, React Icons, Vanilla CSS Grid).
+        *   Struktur direktori proyek.
+        *   Panduan instalasi dan deployment lokal (`npm install`, `npm run dev`, `npm run build`).
+*   **Staging, Commit & Push Berhasil:**
+    *   Melakukan staging seluruh berkas proyek (48 file termasuk seluruh aset foto sertifikat fisik beresolusi tinggi).
+    *   Membuat commit awal: `feat: initial commit - Muhammad Alfisyahrin Muzhaffar personal portfolio`.
+    *   Mengunggah branch `main` ke remote GitHub origin: `git push -u origin main`.
+    *   Proses pengunggahan berhasil 100% dan branch lokal telah terikat secara upstream ke `origin/main`.
+
