@@ -259,3 +259,13 @@ Pada sesi ketiga ini, kita berfokus untuk menyempurnakan struktur navigasi serta
         *   Menghapus `[06]` di samping judul **PROFESSIONAL VALIDATION.** pada tab *Certificates*.
         *   Menghapus `[22]` di samping judul **SELECTED WORK** pada tab *Work*.
     *   Tampilan judul-judul besar kini terlihat lebih bersih, rapi, minimalis, dan elegan tanpa angka yang mengganggu visual tipografi utama.
+
+## 27. Sinkronisasi & Push ke Repository GitHub
+*   **Inisialisasi Git & Konfigurasi Remote:**
+    *   Menginisialisasi Git repository lokal dengan branch utama `main`.
+    *   Menghubungkan remote origin ke repository GitHub resmi: `https://github.com/alfisyahrin-26/Portofolio.git`.
+    *   Memperbarui `.gitignore` agar file konfigurasi lingkungan rahasia (`.env`, `.env.*`) tetap aman dan tidak terunggah ke publik.
+*   **Dokumentasi README.md Profesional:**
+    *   Membuat berkas `README.md` komprehensif yang memuat ringkasan fitur, teknologi unggulan (React 19, Vite, Framer Motion, GSAP, Tailwind/CSS), struktur folder proyek, kredensial penghargaan, dan panduan instalasi/build.
+*   **Push ke GitHub Berhasil:**
+    *   Semua 48 file sumber kode, aset foto dokumen sertifikat asli, komponen interaktif, dan dokumentasi berhasil di-commit dan di-push ke branch `main`.
